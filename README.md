@@ -2,6 +2,23 @@
 
 Machine learning or statistics-based projects usually rely on a large amount of labeled data. One of the upcoming challenges of the ever-growing field is to obtain reliable labeled information in a world where most of the data is unstructured. Amazon Mechanical Turk is one of the tools that are constantly used for labeling information: it provides an inexpensive and fast way to reach long and usually time-consuming tasks. However, when it comes to crowdsourcing frameworks, data reliability is a serious and complicated problem to solve. The gravity of reliability is even deeper when the nature of the task relies on multimodal interactions. Evaluating, understanding and annotating the context of multimodal interactions can be a difficult task even for specialized individuals. The idea of this project is to build upon the previous Articulab work for a text annotation framework. The goal is to extend it for multimodal interactions and dive further into the reliability issue. 
 
+# Quick Setup
+
+First of all, it's necessary to set the server to start running the project, based on another googlecast project: custom-receiver. <br>
+It is a express-node.js server. It has implemented a CORS application that allows the information to be sent Cross-Domain. <br>
+Extra parts -> Analytics and Streaming: The server also has a POST request definition, used for saving data used by the Analytics/Streaming part. Therefore, it's necessary to also install some modules other than just express. It was constructed to simulate a possible use for the information sent by the Cast Player after a session.<br>
+
+<h5>If there is no interest in the Streaming Analytics Part, there is a simple server version [here](./extra/simple-server.js).</h5><br>
+
+- Install Node.js (https://nodejs.org/)
+- Clone this project with github
+- Go to the cloned folder with the command line
+```
+- $npm install express
+- $npm install querystring
+- $npm install body-parser
+- $node server.js
+```
 
 # Framework Design and Considerations
 
@@ -22,11 +39,11 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 
 # Articulab Interface
 
-<h4>Video Upload</h4>
+<b>Video Upload</b>
 
 <br>
 
-<b>Uploading Process, User</b>
+<h5>Uploading Process, User</h5>
 
 * Get the Chromecast device
 * Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
@@ -36,7 +53,7 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 
 <br>
 
-<b>Uploading Process, Backend</b>
+<h5>Uploading Process, Backend</h5>
 
 * Get the Chromecast device
 * Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
@@ -46,11 +63,11 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 
 <br>
 
-<h4>Task Development</h4>
+<b>Task Development</b>
 
 <br>
 
-<b>Uploading Process, User</b>
+<h5>Uploading Process, User</h5>
 
 * Get the Chromecast device
 * Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
@@ -60,7 +77,7 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 
 <br>
 
-<b>Uploading Process, Backend</b>
+<h5>Uploading Process, Backend</h5>
 
 * Get the Chromecast device
 * Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
@@ -70,32 +87,58 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 
 <br>
 
-# Server setup and the Chromecast Debugger
-First of all, it's necessary to set the server to start running the project, based on another googlecast project: custom-receiver. <br>
-It is a express-node.js server. It has implemented a CORS application that allows the information to be sent Cross-Domain. <br>
-Extra parts -> Analytics and Streaming: The server also has a POST request definition, used for saving data used by the Analytics/Streaming part. Therefore, it's necessary to also install some modules other than just express. It was constructed to simulate a possible use for the information sent by the Cast Player after a session.<br>
+# Turker Interface
 
-<h5>If there is no interest in the Streaming Analytics Part, there is a simple server version [here](./extra/simple-server.js).</h5><br>
+<b>Task Hit Interface</b>
 
-- Install Node.js (https://nodejs.org/)
-- Clone this project with github
-- Go to the cloned folder with the command line
-```
-- $npm install express
-- $npm install querystring
-- $npm install body-parser
-- $node server.js
-```
+<br>
 
-<h5>About the server</h5> The server uses the express framework to provide a  node.js server. It implements Cross-origin resource sharing (CORS), which allows truly open access across domain-boundaries. <br>
-<h5>Debugger</h5>After the server is setup and the application is registered, it's possible to use the chromecast debugger. Start a sender device that directs to your new application ID, connect to chromecast. Then, open your browser and try &lt;IP of your Chromecast>:9222 . It will display a web page and if you click in the provided link, you will be redirected to the console page. The console page might be blank, so it's necessary to click in the upper-right shield near the link of the page and select "load unsafe scripts" to see the debug messages. Also, it might be necessary to type the command:
-```
-cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG).
-```
-If it doesn't work, there might be a problem with the sender application (incorrect application ID), the server could not be accessible/online or some similar situation. Try to reboot the server and the chromecast. Changes on the developers console might take around 15 minutes to reload, although it's usually almost simultaneous. The streaming app could also be used for debugging and will be further explained<br><br>
+<h5>Task, Turker Perspective</h5>
+
+* Get the Chromecast device
+* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
+* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
+* The serial # of the Chromecast device needs to be registered in the developer console as well.
+* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+
+<br>
+
+<h5>Task, Backend Perspective </h5>
+
+* Get the Chromecast device
+* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
+* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
+* The serial # of the Chromecast device needs to be registered in the developer console as well.
+* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+
+<br>
+
+<b>Task Development</b>
+
+<br>
+
+<h5>Uploading Process, User</h5>
+
+* Get the Chromecast device
+* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
+* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
+* The serial # of the Chromecast device needs to be registered in the developer console as well.
+* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+
+<br>
+
+<h5>Uploading Process, Backend</h5>
+
+* Get the Chromecast device
+* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
+* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
+* The serial # of the Chromecast device needs to be registered in the developer console as well.
+* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+
+<br>
 
 
-# Server - POST requests
+# Firebase
 
 This simulates the use of the information sent by ajax for a server. For simplicity and to exemplify the general idea, this is all implemented in one unique server. When the server receives a POST request, it handles the acquired data and saves it in two different ways (streaming/analytics) in a Firebase database. For instance, the data for the analytics part looks like this:
 
@@ -119,7 +162,7 @@ It is structured as a "dictionary" or an associative array in Javascript languag
 
 The structure of the POST is set to receive very specific data structure, anything different from that would be not uploaded in the updated json file created. The POST uses -bodyparser- to get the JSONIFIED string and use it as an object. Then it uses some logical components to add the values to each attribute correctly. In the end, it saves the new data in the database using the Set method.
 
-# Upgrades and possible problems
+# TO-DO
 
 The idea of the whole project is to create the possibility of a full implemented custom receiver that could be easily changed and styled, save data from the user and also a separate part of the application to show how this data could be used by the content provider.
 
@@ -131,7 +174,8 @@ The main logic: <br>
 
 There are still a lot of possible improvements for the Server/Database(3) part related to security and efficiency of the Analytics/Streaming (4). The whole implementation server->database->streaming/analytics here provided is not yet supposed to be a ready-for-production App, but skeleton for a future fully designed Application. 
 
-# General Receiver Explanation
+# Future Work and Considerations
+
 <b>Receiver Folder (The New Custom Receiver): </b> <br>
 <i>CSS/HTML</i><br> Provides the general design styling for the App. The loading, launching, paused, next-video, queue pages are presented here. 
 
