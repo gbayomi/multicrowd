@@ -1,56 +1,74 @@
 # Introduction
 
-This cast player was built upon the sample version of the Custom Receiver Sample Player by Google. The receiver options provided by Google are
-"Default", "Styled Media Receiver" and the "Custom Receiver". The first one is a simple default version, the second one
-provides the opportunity to modify some CSS: the background image, the color of the progress bar and the logo. The custom receiver
-allows the full edition of the code regarding Chromecast API to properly load the .js, .css and .html files for the chromecast device usage.<br>
+Machine learning or statistics-based projects usually rely on a large amount of labeled data. One of the upcoming challenges of the ever-growing field is to obtain reliable labeled information in a world where most of the data is unstructured. Amazon Mechanical Turk is one of the tools that are constantly used for labeling information: it provides an inexpensive and fast way to reach long and usually time-consuming tasks. However, when it comes to crowdsourcing frameworks, data reliability is a serious and complicated problem to solve. The gravity of reliability is even deeper when the nature of the task relies on multimodal interactions. Evaluating, understanding and annotating the context of multimodal interactions can be a difficult task even for specialized individuals. The idea of this project is to build upon the previous Articulab work for a text annotation framework. The goal is to extend it for multimodal interactions and dive further into the reliability issue. 
 
-<h5> Directory Tree </h5>
-```
--Analytics
-------css
-------fonts
-------js
-------index.html
--Receiver
-------css
-------js
-------player.html
--streaming
-------streaming.html
--server.js
--README.MD
--firebase.MD
-```
-<h5> Documentation files </h5>
-<b>Server</b> <br>
-* NODE.js server to implement the application itself and POST requests. Full explanation is given below in this file.<br>
-<b>Receiver App</b> <br>
-* The full structure is explained [here](./Receiver/README.md), but a simple and general explanation is given in this file. <br>
-<b>Streaming</b> <br>
-* Contains the JSON-style database with all the information from each video. The full structure is explained [here](./Streaming/README.md).
+
+# Framework Design and Considerations
+
+
+
+# Framework Overview
+
+
+<b>Articulab Interface</b>
+- Video Upload: 
+- Task Creation: 
+
 <br>
-<b>Analytics </b> <br>
-* Contains a sample web implementation of statistical visualization for each seen video. The full structure is explained [here](./Analytics/README.md).<br>
-<b>Firebase </b> <br>
-* The Firebase data storage is explained [here](./firebase.md).
+
+<b>Turker Interface</b>
+- Task Interface: 
+
+
+# Articulab Interface
+
+<h4>Video Upload</h4>
+
 <br>
-<b>Extra </b><br>
-* Simple server version without POST requests for analytics/streaming [here](./extra/simple-server.js) <br>
-* Sample Sender for DRM testing. Built upon the Google sample, but the functionalities between sender-receiver were changed to meet some other testing criteria and proof-of-concepts<br>
-* Sample sender for normal testing. This is the sample from Google for simple testing without any changes.<br>
 
-
-# Chromecast - Setup
+<b>Uploading Process, User</b>
 
 * Get the Chromecast device
 * Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
 * Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
 * The serial # of the Chromecast device needs to be registered in the developer console as well.
-* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes.
-* Enter the App ID of your receiver application into your sender application or one of our sample sender applications, such as DemoCastPlayer.
-* You should now be able to launch your receiver using a sender.
-* Until the app is not published, the system lets you restrict the receiver to devices that you specify and allows you to host on most development servers.
+* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+
+<br>
+
+<b>Uploading Process, Backend</b>
+
+* Get the Chromecast device
+* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
+* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
+* The serial # of the Chromecast device needs to be registered in the developer console as well.
+* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+
+<br>
+
+<h4>Task Development</h4>
+
+<br>
+
+<b>Uploading Process, User</b>
+
+* Get the Chromecast device
+* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
+* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
+* The serial # of the Chromecast device needs to be registered in the developer console as well.
+* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+
+<br>
+
+<b>Uploading Process, Backend</b>
+
+* Get the Chromecast device
+* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
+* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
+* The serial # of the Chromecast device needs to be registered in the developer console as well.
+* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+
+<br>
 
 # Server setup and the Chromecast Debugger
 First of all, it's necessary to set the server to start running the project, based on another googlecast project: custom-receiver. <br>
