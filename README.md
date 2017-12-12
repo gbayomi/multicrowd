@@ -43,47 +43,60 @@ Extra parts -> Analytics and Streaming: The server also has a POST request defin
 
 <br>
 
-<h5>Uploading Process, User</h5>
-
-* Get the Chromecast device
-* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
-* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
-* The serial # of the Chromecast device needs to be registered in the developer console as well.
-* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+image
 
 <br>
 
-<h5>Uploading Process, Backend</h5>
+<h5>User - Uploading Process</h5>
 
-* Get the Chromecast device
-* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
-* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
-* The serial # of the Chromecast device needs to be registered in the developer console as well.
-* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+* Click on 'Browse';
+* Select a division time <DIV_TIME> on the left of 'Browse' (i.e. 30 will divide each video into 30 second chunks);
+* Select or drag all the target mp4 video files <FILENAME>.mp4 that will be divided into <DIV_TIME>;
+* Select a target transcription for each video <FILENAME>.csv with the same name as the original .mp4 file; 
+* Click upload files;
+* Wait until the loading bar is complete to create a task.
 
-<br>
 
-<b>Task Development</b>
+<h5>Video Requirements</h5>
+* .mp4 format
 
-<br>
+<h5>Transcriptions Requirements</h5>
+* .csv format;
+* Same name as related video;
+* Each row should follow the format: start time (s), end time (s), text (string);
 
-<h5>Uploading Process, User</h5>
-
-* Get the Chromecast device
-* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
-* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
-* The serial # of the Chromecast device needs to be registered in the developer console as well.
-* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
 
 <br>
 
-<h5>Uploading Process, Backend</h5>
+<h5>Backend - Uploading Process</h5>
 
-* Get the Chromecast device
-* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
-* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
-* The serial # of the Chromecast device needs to be registered in the developer console as well.
-* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+* Separate the .mp4 and .csv files
+* Return the expected time to finish to the frontend (34s for each 1 min of video)
+* Save each .mp4 video file on the videos folder with a generated video id name.
+* Use ThumbnailGenerator to create a thumbnail for each video on the thumbnails folder;
+* For each video, create a specific folder with the format '<DIV_TIME>_<VIDEO_ID>_vd'; 
+* Use ffmpeg to divide each video into <DIV_TIME> chunks and save them on their specific folder; 
+* Use ThumbnailGenerator to create a thumbnail for each divided video on the thumbnails folder;
+* Match each transcription with the respective video;
+* Save each .csv transcription file on the transcriptions folder with the previously generated video id name.
+* For each transcription, create a specific folder with the format '<DIV_TIME>_<VIDEO_ID>_tr'; 
+* Use fs to divide each transcription file into <DIV_TIME> chunks and save them on their specific folder;
+
+<br>
+
+<b>Task Creation</b>
+
+<br>
+
+<h5>User - Task Creation</h5>
+
+* 
+
+<br>
+
+<h5>Backend - Task Creation</h5>
+
+* 
 
 <br>
 
@@ -95,21 +108,13 @@ Extra parts -> Analytics and Streaming: The server also has a POST request defin
 
 <h5>Task, Turker Perspective</h5>
 
-* Get the Chromecast device
-* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
-* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
-* The serial # of the Chromecast device needs to be registered in the developer console as well.
-* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+* 
 
 <br>
 
 <h5>Task, Backend Perspective </h5>
 
-* Get the Chromecast device
-* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
-* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
-* The serial # of the Chromecast device needs to be registered in the developer console as well.
-* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+* 
 
 <br>
 
@@ -119,21 +124,14 @@ Extra parts -> Analytics and Streaming: The server also has a POST request defin
 
 <h5>Uploading Process, User</h5>
 
-* Get the Chromecast device
-* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
-* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
-* The serial # of the Chromecast device needs to be registered in the developer console as well.
-* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+* 
 
 <br>
 
 <h5>Uploading Process, Backend</h5>
 
-* Get the Chromecast device
-* Upload the project to a website that can be accessed from Chromecast. When the application is published, it will need to host so that it is accessible using HTTPS.
-* Register the application on the Developers Console (http://cast.google.com/publish). Enter the URL for the player.html or whichever is the name of the html that will be used by the device. 
-* The serial # of the Chromecast device needs to be registered in the developer console as well.
-* 15 minutes after you have updated the developers console, you should reboot your Chromecast, so that it picks up the changes
+* 
+
 
 <br>
 
@@ -158,19 +156,13 @@ This simulates the use of the information sent by ajax for a server. For simplic
   }
 }
 ```
-It is structured as a "dictionary" or an associative array in Javascript language. Each primary key is the unique contentId of each video. The value of each of these keys is another associative array object that contains all the current data for a lot of different attributes of the video. It is written in a way to easily get the data afterwards and to save space. The full explanation of each one of the attributes is explained [here](./firebase.md).
 
-The structure of the POST is set to receive very specific data structure, anything different from that would be not uploaded in the updated json file created. The POST uses -bodyparser- to get the JSONIFIED string and use it as an object. Then it uses some logical components to add the values to each attribute correctly. In the end, it saves the new data in the database using the Set method.
 
 # TO-DO
 
-The idea of the whole project is to create the possibility of a full implemented custom receiver that could be easily changed and styled, save data from the user and also a separate part of the application to show how this data could be used by the content provider.
 
 The main logic: <br>
 1. Server implements the online website that will provide information for the device. => Exemplifies the online application<br>
-2. Receiver implements the custom receiver, supporting DRM, queues, saving data, all the listened events and easy to change styles. => Exemplifies the full implemented custom app<br>
-3. Server and Firebase implements the data storage. => Exemplifies the way to get and store data from the custom app<br>
-4. Analytics/Streaming implements the statistical visualization of the data. => Exemplifies the way to use the acquired data to visualize the statistical information.<br>
 
 There are still a lot of possible improvements for the Server/Database(3) part related to security and efficiency of the Analytics/Streaming (4). The whole implementation server->database->streaming/analytics here provided is not yet supposed to be a ready-for-production App, but skeleton for a future fully designed Application. 
 
@@ -178,5 +170,3 @@ There are still a lot of possible improvements for the Server/Database(3) part r
 
 <b>Receiver Folder (The New Custom Receiver): </b> <br>
 <i>CSS/HTML</i><br> Provides the general design styling for the App. The loading, launching, paused, next-video, queue pages are presented here. 
-
-<i>JAVASCRIPT</i><br> The javascript is essential to present the design animations, DRM capabilities, queueing and to save data from the user session for all the different events listened while casting. Therefore, the new version is capable of getting the information from each event and sending it via AJAX calls to an external server and then use the data for any particular matter. The data is divided into Cast Sessions and is particular for each video watched. The data is sent externally via two different ways: <i>Constant Update</i> and <i>Session Data</i>. The constant update is sent to a chosen server every time a different event occur (milestones for parts of the video watched for example). The Sessiopn Data is also sent to a chosen server in the end of each casting. The chromecast runs a simple html, powered with javascript and css. As it is fairly easy to get the speed of the application decreased, the best way to deal with the data is to sent it externally via an Asynchronous Call (AJAX). <br>
