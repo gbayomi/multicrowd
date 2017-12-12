@@ -1,0 +1,107 @@
+/* GENERAL */
+
+html {
+	height: 1200px;
+}
+
+.about-border {
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #5cb85c;
+    margin: 20px auto;
+}
+
+.task-submit {
+	display: none;
+	margin-left: 45%;
+	margin-top: 2%;
+}
+
+/* IMAGE SELECTION */
+
+.check {
+    opacity:0.5;
+	color:#996;	
+	border: 2px solid #5cb85c;
+}
+
+.img-container {
+	min-height: 250px;
+	max-height: 420px !important;
+	overflow: scroll;
+}
+
+.img-element {
+	display: inline-block;
+	margin-left: 8%;
+	outline: teal;
+}
+
+.img-row {
+	margin-top: 2%;
+}
+
+/* GENERAL SELECTION */
+
+.divPadder {
+	padding-top:15px;
+	margin-left: 22%;
+	margin-top: 1%;
+}
+
+.levelPadder {
+	padding-top:15px;
+	margin-left: 36%;
+	margin-top: 1%;
+	display: none;
+}
+
+.typePadder {
+	padding-top:15px;
+	margin-left: 36%;
+	margin-top: 1%;
+	display: none;
+}
+
+.btn-default {
+  color: #4ca1ff;
+  background-color: #fff;
+  border-color: #4ca1ff;
+  width: 200px;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
+	color: #fff;
+	background-color: #5cb85c;
+	border-color: #5cb85c;
+}
+
+.btn-selected {
+	color: #fff;
+	background-color: #5cb85c;
+	border-color: #5cb85c;
+}
+
+
+/* CATEGORY SELECTION */
+
+.cat-container {
+	margin-top: 2%;
+	margin-left: 36%;
+	display: none;
+}
+
+.entry {
+	width: 400px;
+}
+
+.entry:not(:first-of-type)
+{
+    margin-top: 10px;
+}
+
+.glyphicon
+{
+    font-size: 20px;
+}

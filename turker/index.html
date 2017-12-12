@@ -1,0 +1,49 @@
+<head>
+  <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <link href="http://vjs.zencdn.net/6.2.8/video-js.css" rel="stylesheet">
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
+  <!--<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>-->
+
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+  <script src="js/load.js"></script>
+  <link rel="stylesheet" href="css/cframe.css">
+
+</head>
+
+<body>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;" value="">
+  <div class="modal-dialog">
+    <div class="loginmodal-container">
+      <h1>Enter Task ID</h1><br>
+      <form>
+      <input type="text" name="user" id="taskid" placeholder="Task ID">
+      <button id="submit-id" type="button" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid task" id="task-container">
+
+  <span id="left-arrow" class="glyphicon glyphicon-chevron-left"></span>
+  <span id="right-arrow" class="glyphicon glyphicon-chevron-right"></span>
+  <button id="submission" type="button" class="btn btn-success" disabled>Submit</button>
+
+</div>
+  <!--<script src="js/cframe.js"></script>-->
+  <!--<script id="vjsScript" src=""></script>-->
+  <!--<script id="vjsScript" src="http://vjs.zencdn.net/6.2.8/video.js"></script>-->
+</body>

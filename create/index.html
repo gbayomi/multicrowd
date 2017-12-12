@@ -1,0 +1,125 @@
+<head>
+  <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <link href="http://vjs.zencdn.net/6.2.8/video-js.css" rel="stylesheet">
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="css/cframe.css">
+
+</head>
+
+<body>
+
+<div class="container">
+        <h1 class="text-center">Create Task</h1>
+        <div class="about-border"></div>
+</div>
+
+<!-- -->
+<!-- IMAGE SELECTION-->
+<!--  -->
+<div class="container img-container">
+  <div class="img-row">
+
+    <!--
+    <div class="img-element">
+    <img src="../thumbs/classic.png" width='240px' id="vtest" class="img-thumbnail img-check">
+    </div>
+    <div class="img-element">
+    <img src="../thumbs/classic.png" width='240px' id="vtest1" class="img-thumbnail img-check">
+    </div>
+    <div class="img-element">
+    <img src="../thumbs/classic.png" width='240px' id="vtest2" class="img-thumbnail img-check">
+    </div>
+    -->
+
+    <!--<h1>No tasks</h1>-->
+
+
+  </div> 
+
+  <!--
+  <div class="img-row">
+
+    <div class="img-element">
+    <img src="img/run.png" width='240px' class="img-thumbnail img-check">
+    </div>
+    <div class="img-element">
+    <img src="img/run.png" width='240px' class="img-thumbnail img-check">
+    </div>
+    <div class="img-element">
+    <img src="img/run.png" width='240px' class="img-thumbnail img-check">
+    </div>
+
+
+  </div> 
+  -->
+
+</div>
+
+
+<!-- -->
+<!-- GENERAL SELECTIONS-->
+<!--  -->
+<div class="divPadder">
+  <div class="btn-group btn-group-lg" >
+      <a href="javascript:void(0)" class="btn btn-default btn-div">20</a>
+      <a href="javascript:void(0)" class="btn btn-default btn-div">30</a>
+      <a href="javascript:void(0)" class="btn btn-default btn-div">45</a>
+      <a href="javascript:void(0)" class="btn btn-default btn-div">60</a>
+  </div>
+</div>
+
+<div class="levelPadder">
+  <div class="btn-group btn-group-lg" >
+      <a href="javascript:void(0)" class="btn btn-default btn-level">Sentence</a>
+      <a href="javascript:void(0)" class="btn btn-default btn-level">Left</a>
+  </div>
+</div>
+
+<div class="typePadder">
+  <div class="btn-group btn-group-lg" >
+      <a href="javascript:void(0)" class="btn btn-default btn-type">Categorical</a>
+      <a href="javascript:void(0)" class="btn btn-default btn-type">Numerical</a>
+  </div>
+</div>
+
+
+<!-- -->
+<!-- CATEGORY SELECTION-->
+<!--  -->
+<div class="container cat-container">
+  <div class="row">
+        <div class="control-group" id="fields">
+            <div class="controls"> 
+                <form role="form" autocomplete="off">
+                    <div class="entry input-group col-xs-3">
+                        <input class="form-control" name="fields[]" type="text" placeholder="Type something" />
+                      <span class="input-group-btn">
+                            <button class="btn btn-success btn-add" type="button">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            <br>
+            </div>
+        </div>
+  </div>
+</div>
+
+<div class="container task-submit">
+<div class="btn btn-success"><strong>Create Task</strong></div>
+</div>
+  
+  <script src="js/cframe.js"></script>
+</body>
