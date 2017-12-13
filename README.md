@@ -29,7 +29,7 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 
 # Articulab Interface
 
-<b>Video Upload</b>
+### Video Upload
 
 <br>
 
