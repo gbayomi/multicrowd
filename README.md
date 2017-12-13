@@ -14,7 +14,7 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 
 # Framework Design and Considerations
 
-<i> in progress <i>
+<i> in progress </i>
 
 # Framework Overview
 
@@ -50,12 +50,14 @@ image
 
 
 <h5>Video Requirements</h5>
-* .mp4 format
+* format should be .mp4;
 
 <h5>Transcriptions Requirements</h5>
-* .csv format;
+
+* format should be .csv;
 * Same name as related video;
 * Each row should follow the format: start time (s), end time (s), text (string);
+
 
 
 <br>
@@ -144,7 +146,6 @@ image
 
 <b>Task Hit Interface</b>
 
-
 <br>
 
 image
@@ -153,13 +154,23 @@ image
 
 <h5>Turker - Task Hit</h5>
 
-* 
+* Enter the specified task ID;
+* For each subdivision of the video, annotate with the correct label;
+* Click on a sentence to play the specific respective part of the video;
+* After each subdivision, press the next arrow to go forward or backward to change a previous label;
+* When the task is complete, the submit button will be available;
+* Click submit to finalize the task.
 
 <br>
 
 <h5>Backend - Task Hit </h5>
 
-* 
+* Get the task ID;
+* Call the task by the ID from Firebase;
+* Load the task (frontend);
+* Link each sentence with a start/stop time (frontend);
+* When the task is complete, update the json with the predicted labels;
+* Save the final result from Firebase.
 
 <br>
 
@@ -167,11 +178,12 @@ image
 
 # Firebase
 
-
-
+<i> in progress </i>
 
 # TO-DO
 
+<i> in progress </i>
 
 # Future Work and Considerations
- 
+
+<i> in progress </i>
