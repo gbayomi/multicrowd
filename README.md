@@ -31,11 +31,9 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 
 ### Video Upload
 
-<br>
 
 ![demo](Screenshots/uploadvideo.gif)
 
-<br>
 
 <h5>User - Uploading Process</h5>
 
@@ -48,13 +46,14 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 
 
 <h5>Video Requirements</h5>
-* format should be .mp4;
+
+* format should be .mp4.
 
 <h5>Transcriptions Requirements</h5>
 
 * format should be .csv;
 * Same name as related video;
-* Each row should follow the format: start time (s), end time (s), text (string);
+* Each row should follow the format: start time (s), end time (s), text (string).
 
 
 
@@ -76,14 +75,12 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 
 <br>
 
-<b>Task Creation</b>
+### Task Creation
 
 
-<br>
 
 ![demo](Screenshots/createtask.gif)
 
-<br>
 
 <h5>User - Task Creation</h5>
 
@@ -152,25 +149,18 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 
 # Turker Interface (WILL BE CHANGED IN A FEW DAYS)
 
-<b>Task Hit Interface</b>
+### Task Hit Interface
 
-<br>
+
 
 ![demo](Screenshots/enterid.gif)
 
-<br>
-
-<br>
 
 ![demo](Screenshots/turker1.gif)
 
-<br>
-
-<br>
 
 ![demo](Screenshots/turker2.gif)
 
-<br>
 
 <h5>Turker - Task Hit</h5>
 
