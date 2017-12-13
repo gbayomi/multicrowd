@@ -35,7 +35,7 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 
 <br>
 
-image
+![demo](Screenshots/uploadvideo.gif)
 
 <br>
 
@@ -83,7 +83,7 @@ image
 
 <br>
 
-image
+![demo](Screenshots/createtask.gif)
 
 <br>
 
@@ -148,7 +148,19 @@ image
 
 <br>
 
-image
+![demo](Screenshots/enterid.gif)
+
+<br>
+
+<br>
+
+![demo](Screenshots/turker1.gif)
+
+<br>
+
+<br>
+
+![demo](Screenshots/turker2.gif)
 
 <br>
 
