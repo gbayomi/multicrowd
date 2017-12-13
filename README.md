@@ -6,10 +6,8 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 
 
 ```
-- $npm install express
-- $npm install querystring
-- $npm install body-parser
-- $node server.js
+- npm install 
+- npm start
 ```
 
 # Framework Design and Considerations
@@ -102,20 +100,12 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 * Collect the information from the user on a JSON object (frontend):
 
 ```json
-{
-  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4": {
-    "title": "For Bigger Escape",
-    "duration": 15.046531,
-    "secondsSeen": "1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/0",
-    "secondsPaused": "0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/1",
-    "secondsRestart": "1/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0",
-    "secondsVolumeChanged": "0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0",
-    "Views": 1,
-    "AvgPercentageWatched": 0.9375,
-    "MilestonePercentagePerSession": [0, 0, 0, 0, 1],
-    "viewsYear": {"2015": [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]}
-  }
-}
+"classic-8ffa7d08-2658" : {
+      "categories" : [ "SOJE", "FDFD" ],
+      "div_time" : "30",
+      "help_video_id" : "8d70f3c8-",
+      "level_type" : "Sentence",
+      "price" : "10"
 ```
 
 * Send the object (frontend);
@@ -124,20 +114,38 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 * Merge the two JSON objects:
 
 ```json
-{
-  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4": {
-    "title": "For Bigger Escape",
-    "duration": 15.046531,
-    "secondsSeen": "1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/0",
-    "secondsPaused": "0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/1",
-    "secondsRestart": "1/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0",
-    "secondsVolumeChanged": "0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0",
-    "Views": 1,
-    "AvgPercentageWatched": 0.9375,
-    "MilestonePercentagePerSession": [0, 0, 0, 0, 1],
-    "viewsYear": {"2015": [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]}
-  }
-}
+"classic-8ffa7d08-2658" : {
+      "categories" : [ "SOJE", "FDFD" ],
+      "div_time" : "30",
+      "help_video_id" : "8d70f3c8-",
+      "level_type" : "Sentence",
+      "price" : "10",
+      "sub_videos" : {
+        "video_0" : {
+          "id" : "div_classic_0",
+          "sentence_intervals" : [ [ 0.1, 5.5 ], [ 22.3, 28 ] ],
+          "sentences" : [ "ok how are you", "fine, thanks" ]
+        },
+        "video_1" : {
+          "id" : "div_classic_1",
+          "sentence_intervals" : [ [ 0.1, 5.5 ], [ 22.3, 28 ] ],
+          "sentences" : [ "ok how are you", "fine, thanks" ]
+        },
+        "video_2" : {
+          "id" : "div_classic_2",
+          "sentence_intervals" : [ [ 0.1, 5.5 ], [ 22.3, 28 ] ],
+          "sentences" : [ "ok how are you", "fine, thanks" ]
+        },
+        "video_3" : {
+          "id" : "div_classic_3",
+          "sentence_intervals" : [ [ 0.1, 5.5 ], [ 22.3, 28 ] ],
+          "sentences" : [ "ok how are you", "fine, thanks" ]
+        }
+      },
+      "time_to_complete" : "800",
+      "type:" : "categorical",
+      "video_id" : "classic"
+    }
 ```
 
 * Save the results on Firebase.
