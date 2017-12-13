@@ -4,15 +4,7 @@ Machine learning or statistics-based projects usually rely on a large amount of 
 
 # Quick Setup
 
-First of all, it's necessary to set the server to start running the project, based on another googlecast project: custom-receiver. <br>
-It is a express-node.js server. It has implemented a CORS application that allows the information to be sent Cross-Domain. <br>
-Extra parts -> Analytics and Streaming: The server also has a POST request definition, used for saving data used by the Analytics/Streaming part. Therefore, it's necessary to also install some modules other than just express. It was constructed to simulate a possible use for the information sent by the Cast Player after a session.<br>
 
-<h5>If there is no interest in the Streaming Analytics Part, there is a simple server version [here](./extra/simple-server.js).</h5><br>
-
-- Install Node.js (https://nodejs.org/)
-- Clone this project with github
-- Go to the cloned folder with the command line
 ```
 - $npm install express
 - $npm install querystring
@@ -22,7 +14,7 @@ Extra parts -> Analytics and Streaming: The server also has a POST request defin
 
 # Framework Design and Considerations
 
-
+<i> in progress <i>
 
 # Framework Overview
 
@@ -86,59 +78,26 @@ image
 
 <b>Task Creation</b>
 
+
+<br>
+
+image
+
 <br>
 
 <h5>User - Task Creation</h5>
 
-* 
+* Select the thumbnail of a video for task (or group of videos that will have the same task specifications);
+* Select the <DIV_TIME> of the task (only available for the previously uploaded divisions);
+* Select if the evaluation will be on sentence-level or frame-level;
+* Select if the evaluation will be on categorical or numerical values;
+* Select the values that will be labeled.
 
 <br>
 
 <h5>Backend - Task Creation</h5>
 
-* 
-
-<br>
-
-# Turker Interface
-
-<b>Task Hit Interface</b>
-
-<br>
-
-<h5>Task, Turker Perspective</h5>
-
-* 
-
-<br>
-
-<h5>Task, Backend Perspective </h5>
-
-* 
-
-<br>
-
-<b>Task Development</b>
-
-<br>
-
-<h5>Uploading Process, User</h5>
-
-* 
-
-<br>
-
-<h5>Uploading Process, Backend</h5>
-
-* 
-
-
-<br>
-
-
-# Firebase
-
-This simulates the use of the information sent by ajax for a server. For simplicity and to exemplify the general idea, this is all implemented in one unique server. When the server receives a POST request, it handles the acquired data and saves it in two different ways (streaming/analytics) in a Firebase database. For instance, the data for the analytics part looks like this:
+* Collect the information from the user on a JSON object (frontend):
 
 ```json
 {
@@ -157,16 +116,62 @@ This simulates the use of the information sent by ajax for a server. For simplic
 }
 ```
 
+* Send the object (frontend);
+* Create an entry sub_videos on the JSON object;
+* Located the respective division folder for transcriptions and videos and save content on a JSON object;
+* Merge the two JSON objects:
+
+```json
+{
+  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4": {
+    "title": "For Bigger Escape",
+    "duration": 15.046531,
+    "secondsSeen": "1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/0",
+    "secondsPaused": "0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/1",
+    "secondsRestart": "1/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0",
+    "secondsVolumeChanged": "0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0",
+    "Views": 1,
+    "AvgPercentageWatched": 0.9375,
+    "MilestonePercentagePerSession": [0, 0, 0, 0, 1],
+    "viewsYear": {"2015": [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]}
+  }
+}
+```
+
+* Save the results on Firebase.
+
+# Turker Interface (WILL BE CHANGED IN A FEW DAYS)
+
+<b>Task Hit Interface</b>
+
+
+<br>
+
+image
+
+<br>
+
+<h5>Turker - Task Hit</h5>
+
+* 
+
+<br>
+
+<h5>Backend - Task Hit </h5>
+
+* 
+
+<br>
+
+
+
+# Firebase
+
+
+
 
 # TO-DO
 
 
-The main logic: <br>
-1. Server implements the online website that will provide information for the device. => Exemplifies the online application<br>
-
-There are still a lot of possible improvements for the Server/Database(3) part related to security and efficiency of the Analytics/Streaming (4). The whole implementation server->database->streaming/analytics here provided is not yet supposed to be a ready-for-production App, but skeleton for a future fully designed Application. 
-
 # Future Work and Considerations
-
-<b>Receiver Folder (The New Custom Receiver): </b> <br>
-<i>CSS/HTML</i><br> Provides the general design styling for the App. The loading, launching, paused, next-video, queue pages are presented here. 
+ 
