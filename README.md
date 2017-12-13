@@ -46,19 +46,19 @@ After cloning the repository, the following commands will start the application:
 
 ### Articulab Interface
 ##### Video Upload
-<b>Link: </b> localhost:3000/uploadvid
+<b>Local Reference: </b> localhost:3000/uploadvid
 <br>
 <b>Quick Description: </b> Upload a video and the respective transcript, deciding on the time division schedule in seconds.
 
 ##### Task Creation
 
-<b>Link: </b> localhost:3000/create
+<b>Local Reference: </b>  localhost:3000/create
 <br>
 <b>Quick Description: </b> Create a task based on the uploaded videos, selecting sentence/frame level and type of labeling.
 
 ### Turker Interface
 ##### Task Interface
-<b>Link: </b> localhost:3000/turker
+<b>Local Reference: </b>  localhost:3000/turker
 <br>
 <b>Quick Description: </b> A turker is able to label values based on the previously created tasks.
 
